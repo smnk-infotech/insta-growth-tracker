@@ -195,14 +195,14 @@ export const sampleReels: ReelPerformance[] = [
 ];
 
 export const gsaMetrics = {
-  currentPoints: 225,
+  currentPoints: 25,
   currentTier: "The Explorer",
   nextTierPoints: 600,
-  pointsToNextTier: 375,
-  tasksCompleted: 1,
-  tasksInProgress: 2,
+  pointsToNextTier: 575,
+  tasksCompleted: 0,
+  tasksInProgress: 1,
   totalTasks: 5,
-  reelsCreated: 2,
+  reelsCreated: 0,
   eventsHosted: 0,
   totalParticipants: 0,
 };
