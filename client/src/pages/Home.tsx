@@ -1,25 +1,40 @@
-import { Button } from "@/components/ui/button";
-import { Loader2 } from "lucide-react";
-import { Streamdown } from 'streamdown';
+import { useState } from "react";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import Hero from "@/components/Hero";
+import Dashboard from "@/components/Dashboard";
+import ContentCalendar from "@/components/ContentCalendar";
+import Strategy from "@/components/Strategy";
 
-/**
- * All content in this page are only for example, replace with your own feature implementation
- * When building pages, remember your instructions in Frontend Best Practices, Design Guide and Common Pitfalls
- */
 export default function Home() {
-  // If theme is switchable in App.tsx, we can implement theme toggling like this:
-  // const { theme, toggleTheme } = useTheme();
+  const [activeTab, setActiveTab] = useState("dashboard");
 
   return (
-    <div className="min-h-screen flex flex-col">
-      <main>
-        {/* Example: lucide-react for icons */}
-        <Loader2 className="animate-spin" />
-        Example Page
-        {/* Example: Streamdown for markdown rendering */}
-        <Streamdown>Any **markdown** content</Streamdown>
-        <Button variant="default">Example Button</Button>
-      </main>
+    <div className="min-h-screen bg-background">
+      {/* Hero Section */}
+      <Hero />
+
+      {/* Main Content */}
+      <div className="container py-12">
+        <Tabs value={activeTab} onValueChange={setActiveTab} className="w-full">
+          <TabsList className="grid w-full grid-cols-3 mb-8">
+            <TabsTrigger value="dashboard">Dashboard</TabsTrigger>
+            <TabsTrigger value="calendar">30-Day Calendar</TabsTrigger>
+            <TabsTrigger value="strategy">Strategy</TabsTrigger>
+          </TabsList>
+
+          <TabsContent value="dashboard" className="space-y-8">
+            <Dashboard />
+          </TabsContent>
+
+          <TabsContent value="calendar" className="space-y-8">
+            <ContentCalendar />
+          </TabsContent>
+
+          <TabsContent value="strategy" className="space-y-8">
+            <Strategy />
+          </TabsContent>
+        </Tabs>
+      </div>
     </div>
   );
 }
