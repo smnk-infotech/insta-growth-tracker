@@ -24,28 +24,43 @@ export default function Hero() {
           </div>
 
           <h1 className="text-5xl md:text-6xl font-bold text-white leading-tight">
-            Track. Analyze.{" "}
-            <span className="text-accent">Grow.</span>
+            Your GSA 2026{" "}
+            <span className="text-accent">Performance Hub</span>
           </h1>
 
           <p className="text-lg text-white/90 max-w-xl">
-            Monitor your Instagram growth with a 30-day interactive content calendar, real-time metrics, and proven growth strategies tailored for student creators.
+            Track Instagram growth, GSA points, monthly tasks, and rewards in one unified dashboard. Monitor your journey from Explorer to Celestial tier with real-time analytics.
           </p>
 
-          <div className="flex gap-4 pt-4">
+          <div className="flex gap-4 pt-4 flex-wrap">
             <Button
               size="lg"
               className="bg-accent hover:bg-accent/90 text-white gap-2"
             >
-              Start Tracking <ArrowRight className="w-4 h-4" />
+              View Dashboard <ArrowRight className="w-4 h-4" />
             </Button>
             <Button
               size="lg"
               variant="outline"
               className="border-white/30 text-white hover:bg-white/10"
             >
-              View Strategy
+              Learn About GSA
             </Button>
+          </div>
+
+          <div className="flex gap-6 pt-6 text-white/80 text-sm">
+            <div>
+              <p className="font-semibold text-white">166</p>
+              <p>Followers</p>
+            </div>
+            <div>
+              <p className="font-semibold text-white">25 pts</p>
+              <p>Current Points</p>
+            </div>
+            <div>
+              <p className="font-semibold text-white">3.2%</p>
+              <p>Engagement Rate</p>
+            </div>
           </div>
         </div>
       </div>
