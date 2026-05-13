@@ -3,6 +3,7 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import Hero from "@/components/Hero";
 import Dashboard from "@/components/Dashboard";
 import ContentCalendar from "@/components/ContentCalendar";
+import DetailedContentCalendar from "@/components/DetailedContentCalendar";
 import Strategy from "@/components/Strategy";
 import GSAPointsTracker from "@/components/GSAPointsTracker";
 import GSATaskPlanner from "@/components/GSATaskPlanner";
@@ -86,7 +87,7 @@ export default function Home() {
 
           {/* Content Calendar */}
           <TabsContent value="calendar" className="space-y-8">
-            <ContentCalendar />
+            <DetailedContentCalendar />
           </TabsContent>
 
           {/* Growth Strategy */}
